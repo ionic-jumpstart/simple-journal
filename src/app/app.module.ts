@@ -1,6 +1,8 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 
+import { AppConfigToken, AppConfig } from '../providers/app-config';
+
 import { JournalApp } from './app.component';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
@@ -49,7 +51,8 @@ import { TabsPage } from '../pages/tabs/tabs';
     TabsPage
   ],
   providers: [
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    {provide: AppConfigToken, useValue: AppConfig}
   ]
 })
 export class AppModule {}
