@@ -4,11 +4,10 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { TabsPage } from '../pages/tabs/tabs';
 
-
 @Component({
   templateUrl: 'app.html'
 })
-export class MyApp {
+export class JournalApp {
   rootPage = TabsPage;
 
   constructor(platform: Platform) {
@@ -18,5 +17,7 @@ export class MyApp {
       StatusBar.styleDefault();
       Splashscreen.hide();
     });
+
+    
   }
 }
