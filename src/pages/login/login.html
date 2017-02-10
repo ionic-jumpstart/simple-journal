@@ -1,12 +1,41 @@
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>Login</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
 <ion-content padding>
+
+  <!-- .logo -->
+  <div class="logo">
+    <img src="assets/image/logo.png" />
+  </div>
+  <!-- /.logo -->
+
+  <!-- form -->
+  <form #loginForm="ngForm">
+    <ion-list inset>
+      <ion-item color="dark">
+        <ion-label floating>Email</ion-label>
+        <ion-input [(ngModel)]="email" name="email" type="email" required></ion-input>
+      </ion-item>
+
+      <ion-item color="dark">
+        <ion-label floating>Password</ion-label>
+        <ion-input [(ngModel)]="password" name="password" type="password" required></ion-input>
+      </ion-item>
+
+      <ion-item color="dark"></ion-item>
+    </ion-list>
+
+    <ion-row responsive-sm>
+      <ion-col>
+        <button ion-button (click)="onLogin(loginForm)" type="submit" block>Login</button>
+      </ion-col>
+      
+    </ion-row>
+
+  </form>
+  <!-- /form -->
+
+  <ion-row responsive-sm>
+    <ion-col>
+      <button (click)="goSignup()" ion-button color="light" clear block>No account yet? Create one</button>
+    </ion-col>
+  </ion-row>
 
 </ion-content>

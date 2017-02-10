@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
+
 import { NavController, NavParams } from 'ionic-angular';
+
+import { SignupPage } from '../signup/signup';
+import { TabsPage } from '../tabs/tabs';
 
 @Component({
   selector: 'page-login',
@@ -7,10 +12,19 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  email    : string;
+  password : string;
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
+  constructor(
+    private navCtrl  : NavController
+  ) {}
+
+  onLogin(loginForm : NgForm) {
+    // TODO: Authenticate the user
   }
 
+  goSignup() {
+    // Set the root instead pushing the page so it will not being added into the history stack
+    this.navCtrl.setRoot(SignupPage);
+  }
 }
