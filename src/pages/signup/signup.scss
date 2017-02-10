@@ -1,3 +1,49 @@
 page-signup {
 
+  // Change positioning and background color to dark
+  ion-content {
+    background-color: color($colors, dark) !important;
+  }
+
+  // Form Positioning
+  form {
+    padding-top: 14.6%;
+  }
+
+    // Change the color of button
+  button[type="submit"] {
+    background-color: #636363
+  }
+
+  // Override border color of item input
+  .list-md .item-block .item-inner {
+    border-bottom-color: #dedede !important;
+  }
+
+  .item .label[floating] {
+    color: #CECECE;
+  }
+
+  // Override the floating label color into light when focused
+  .item.input-has-focus .label[floating] {
+    color: color($colors, light);
+  }
+
+  // Override highlight border color when focused
+  .item.item-input.input-has-focus .item-inner {
+    border-bottom-color: color($colors, light) !important;
+    box-shadow         : inset 0 -1px 0 0 color($colors, light) !important;
+  }
+
+  .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus) .item-inner {
+    border-bottom-color: color($colors, light) !important;
+    box-shadow         : inset 0 -1px 0 0 color($colors, light) !important;
+  }
+
+  // Override highlight border color when error
+  .item.item-input.ng-invalid.ng-touched:not(.input-has-focus) .item-inner {
+    border-bottom-color: #dedede !important;
+    box-shadow         : none;
+  }
+
 }
