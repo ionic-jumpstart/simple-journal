@@ -7,59 +7,63 @@
 </ion-header>
 
 <ion-content>
-  <!-- list -->
-  <ion-list>
 
-    <!-- subject -->
-    <ion-item margin-bottom>
-      <ion-input type="text" placeholder="Add a subject (optional)"></ion-input>
-    </ion-item>
-    <!-- /subject -->
+  <!-- form -->
+  <form #writeForm="ngForm">
+    <ion-list margin-top>
 
-    <!-- content -->
-    <ion-item>
-      <ion-textarea rows="5" type="text" placeholder="What's on your mind?"></ion-textarea>
-    </ion-item>
-    <!-- /content-->
+      <!-- subject -->
+      <ion-item margin-bottom>
+        <ion-input type="text" placeholder="Add a subject (optional)"></ion-input>
+      </ion-item>
+      <!-- /subject -->
 
-    <!-- attachment -->
-    <ion-item margin-bottom>
-      <ion-row>
+      <!-- content -->
+      <ion-item>
+        <ion-textarea rows="5" type="text" placeholder="What's on your mind?"></ion-textarea>
+      </ion-item>
+      <!-- /content-->
 
-        <ion-col width-20>
-          <button ion-button outline large color="dark">
-            +
-          </button>
-        </ion-col>
+      <!-- attachment -->
+      <ion-item margin-bottom>
+        <ion-row>
 
-      </ion-row>
-    </ion-item>
-    <!-- /attachment -->
+          <ion-col width-20>
+            <button ion-button outline large color="dark">
+              +
+            </button>
+          </ion-col>
 
-    <!-- sns -->
-    <ion-item text-center margin-bottom>
-      <ion-row>
+        </ion-row>
+      </ion-item>
+      <!-- /attachment -->
 
-        <ion-col color="facebook" ion-button icon-left clear>
-            <ion-icon name="logo-facebook"></ion-icon>
-            Facebook
-        </ion-col>
+      <!-- sns -->
+      <ion-item text-center margin-bottom>
+        <ion-row>
 
-        <ion-col color="twitter" ion-button icon-left clear>
-            <ion-icon name="logo-twitter"></ion-icon>
-            Twitter
-        </ion-col>
+          <ion-col color="facebook" ion-button icon-left clear>
+              <ion-icon name="logo-facebook"></ion-icon>
+              Facebook
+          </ion-col>
 
-      </ion-row>
-    </ion-item>
-    <!-- /sns -->
+          <ion-col color="twitter" ion-button icon-left clear>
+              <ion-icon name="logo-twitter"></ion-icon>
+              Twitter
+          </ion-col>
 
-    <!-- post -->
-    <button ion-item text-center detail-none color="primary">
-      Post
-    </button>
-    <!-- /post -->
+        </ion-row>
+      </ion-item>
+      <!-- /sns -->
 
-  </ion-list>
+      <!-- post -->
+      <button ion-item text-center detail-none color="primary">
+        Post
+      </button>
+      <!-- /post -->
+
+    </ion-list>
+  </form>
+  <!-- /form -->
 
 </ion-content>
