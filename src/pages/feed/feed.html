@@ -4,6 +4,49 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+
+  <!-- refresh -->
+  <ion-refresher (ionRefresh)="refresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <!-- /refresher -->
+
+  <!-- card -->
+  <ion-card *ngFor="let post of posts">
+
+    <!-- item -->
+    <ion-item>
+      <ion-avatar item-left>
+        <img src="assets/image/avatar.png">
+      </ion-avatar>
+      <h2>{{ post.title }}</h2>
+      <p>{{ post.time }}</p>
+    </ion-item>
+    <!-- /item -->
+
+    <!-- content -->
+    <ion-card-content>
+      <p text-justify content>{{ post.content }} ... <a href=#>See More</a></p>
+    </ion-card-content>
+    <!-- /content -->
+
+    <!-- action -->
+    <ion-row>
+      <ion-col width-33 offset-67 text-right>
+        <button ion-button icon-left clear small>
+          <ion-icon name="share"></ion-icon>
+          <div>Share</div>
+        </button>
+      </ion-col>
+    </ion-row>
+    <!-- /action -->
+
+  </ion-card>
+  <!-- /card -->
+
+  <div padding [hidden]="posts && posts.length > 0">
+    <p text-center>No post at the moment, try to write one!</p>
+  </div>
 
 </ion-content>

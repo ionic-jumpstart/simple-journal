@@ -1,3 +1,9 @@
 page-feed {
+  ion-content {
+    background-color: color($colors, grey) !important;
+  }
 
+  p[content] {
+    white-space: pre-line;
+  }
 }
