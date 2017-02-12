@@ -1,4 +1,9 @@
 page-profile {
+  // Change background color to dark
+  ion-content {
+    background-color: color($colors, grey) !important;
+  }
+
   // Profile Image Positioning
   .profile-img {
     padding: 50px 0px;
