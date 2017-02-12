@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 
-import { NavController } from 'ionic-angular';
+import { App, NavController } from 'ionic-angular';
+
+import { ProfilePage } from '../profile/profile';
+
+import { UserData } from '../../providers/user-data';
 
 @Component({
   selector: 'page-settings',
@@ -8,8 +12,25 @@ import { NavController } from 'ionic-angular';
 })
 export class SettingsPage {
 
-  constructor(public navCtrl: NavController) {
+  profile : any;
 
+  constructor(
+    private app      : App,
+    private navCtrl  : NavController,
+    private userData : UserData
+  ) {
+    
+  }
+
+  private ionViewDidLoad() {
+    this.userData.getProfileInfo().subscribe((profile) => {
+      this.profile = profile;
+    });
+  }
+
+  private openProfile() {
+    // Use application root nav so tabs wont appear
+    this.app.getRootNav().push(ProfilePage);
   }
 
 }

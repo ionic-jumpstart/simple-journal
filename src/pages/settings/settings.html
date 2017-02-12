@@ -6,6 +6,36 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+
+  <!-- card -->
+  <ion-card>
+
+    <!-- item -->
+    <ion-item>
+      <ion-avatar profile-settings item-left>
+        <img src="assets/image/avatar.png">
+      </ion-avatar>
+      <h1>{{ profile?.name }}</h1>
+      <p>{{ profile?.statistic.storyCount }} stories, {{ profile?.statistic.photoCount }} photos since {{ profile?.registerDate }}</p>
+
+      <!-- action -->
+      <ion-row>
+        <ion-col width-10>
+          <button color="dark" ion-button icon-only clear small (click)="openProfile()">
+            <ion-icon name="create"></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col width-10>
+          <button color="dark" ion-button icon-only clear small>
+            <ion-icon name="settings"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+      <!-- /action -->
+    </ion-item>
+    <!-- /item -->
+
+  </ion-card>
 
 </ion-content>
