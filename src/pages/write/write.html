@@ -6,6 +6,60 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+  <!-- list -->
+  <ion-list>
+
+    <!-- subject -->
+    <ion-item margin-bottom>
+      <ion-input type="text" placeholder="Add a subject (optional)"></ion-input>
+    </ion-item>
+    <!-- /subject -->
+
+    <!-- content -->
+    <ion-item>
+      <ion-textarea rows="5" type="text" placeholder="What's on your mind?"></ion-textarea>
+    </ion-item>
+    <!-- /content-->
+
+    <!-- attachment -->
+    <ion-item margin-bottom>
+      <ion-row>
+
+        <ion-col width-20>
+          <button ion-button outline large color="dark">
+            +
+          </button>
+        </ion-col>
+
+      </ion-row>
+    </ion-item>
+    <!-- /attachment -->
+
+    <!-- sns -->
+    <ion-item text-center margin-bottom>
+      <ion-row>
+
+        <ion-col color="facebook" ion-button icon-left clear>
+            <ion-icon name="logo-facebook"></ion-icon>
+            Facebook
+        </ion-col>
+
+        <ion-col color="twitter" ion-button icon-left clear>
+            <ion-icon name="logo-twitter"></ion-icon>
+            Twitter
+        </ion-col>
+
+      </ion-row>
+    </ion-item>
+    <!-- /sns -->
+
+    <!-- post -->
+    <button ion-item text-center detail-none color="primary">
+      Post
+    </button>
+    <!-- /post -->
+
+  </ion-list>
 
 </ion-content>

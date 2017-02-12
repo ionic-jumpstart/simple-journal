@@ -1,3 +1,14 @@
-page-write {
+$text-input-md-show-success-highlight:      false;
+$text-input-md-show-error-highlight:        false;
 
+page-write {
+  ion-content {
+    background-color: color($colors, grey) !important;
+  }
+
+  .item-input .item-inner,
+  .list-md .item-input:last-child {
+    border-bottom: none !important;
+    box-shadow: none !important;
+  }
 }
