@@ -1,4 +1,9 @@
 page-settings {
+  // Change background color to dark
+  ion-content {
+    background-color: color($colors, grey) !important;
+  }
+  
   ion-avatar[profile-settings] img {
     width: auto;
     height: auto;

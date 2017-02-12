@@ -9,7 +9,7 @@
 <ion-content>
 
   <!-- card -->
-  <ion-card>
+  <ion-list>
 
     <!-- item -->
     <ion-item>
@@ -21,13 +21,13 @@
 
       <!-- action -->
       <ion-row>
-        <ion-col width-10>
-          <button color="dark" ion-button icon-only clear small (click)="openProfile()">
+        <ion-col width-20>
+          <button color="dark" ion-button icon-only clear (click)="openProfile()">
             <ion-icon name="create"></ion-icon>
           </button>
         </ion-col>
-        <ion-col width-10>
-          <button color="dark" ion-button icon-only clear small>
+        <ion-col width-20>
+          <button color="dark" ion-button icon-only clear>
             <ion-icon name="settings"></ion-icon>
           </button>
         </ion-col>
@@ -36,6 +36,6 @@
     </ion-item>
     <!-- /item -->
 
-  </ion-card>
+  </ion-list>
 
 </ion-content>
