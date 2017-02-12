@@ -6,7 +6,44 @@
 
 </ion-header>
 
+<ion-content>
 
-<ion-content padding>
+  <!-- .profile-img -->
+  <div class="profile-img">
+    <img src="assets/image/avatar.png" />
+  </div>
+  <!-- /.profile-img -->
+
+  <!-- form -->
+  <form #profileForm="ngForm">
+    <ion-list inset>
+
+      <ion-item>
+        <ion-input [(ngModel)]="profile.name" name="fullname" type="text" placeholder="Your name" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input [(ngModel)]="profile.email" name="email" type="email" placeholder="Email Address" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input [(ngModel)]="profile.phone" name="phone" type="tel" placeholder="Phone Number" required></ion-input>
+      </ion-item>
+
+      <button ion-item>
+        <ion-icon color="facebook" name="logo-facebook" item-left></ion-icon>
+        {{ profile.sns?.facebook?.name }}
+        <span ion-text color="dark" [hidden]="profile.sns.facebook">Connect facebook account</span>
+      </button>
+
+      <button ion-item>
+        <ion-icon color="twitter" name="logo-twitter" item-left></ion-icon>
+        {{ profile.sns?.twitter?.name }}
+        <span ion-text color="dark" [hidden]="profile.sns.twitter">Connect twitter account</span>
+      </button>
+
+    </ion-list>
+  </form>
+  <!-- /form -->
 
 </ion-content>
